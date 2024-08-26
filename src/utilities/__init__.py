@@ -1,15 +1,22 @@
+"""
+Utilities Package
+-----------------
 
-from .database import read_from_database,create_sample_db
-from .report import generate_report_wrapper
-from .files.etl_file import etl_file
-from .files.csv_file import csv_file
-from .files.json_file import json_file
-from .files.etl_file_map import ETL_FILES_TYPE_MAPPING
-from .files.etl_file_map import get_etl_file_class
+    This package contains helper utilites for Hadi-etl-script.
+
+    Subpackages
+        - files         : files interactions, reading, writing, filesystem enquiry.
+        - reports       : reports definition, initialization, calculation and printing.
+        - dualstream    : manipulating standard output and print to more than one destination.
+    
+    modules
+        - database      : databases interactions, creation, inserts, reading.
+
+"""
 
 
-__all__ = [ 'create_sample_db','read_from_database',
-            'etl_file','csv_file','json_file',
-            'ETL_FILES_TYPE_MAPPING','get_etl_file_class',
-            'generate_report_wrapper',
+from .database import read_from_database,create_sample_db,etl_db_conn
+__all__ = [ 
+            'create_sample_db','read_from_database','etl_db_conn',
           ]
+

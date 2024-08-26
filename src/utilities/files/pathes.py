@@ -12,8 +12,9 @@ Methods:
     
 '''
 import os
-
 from typing import Tuple
+
+
 def check_path(path:str) -> Tuple[bool,str]:
     """ 
         Check if path is a valid path.

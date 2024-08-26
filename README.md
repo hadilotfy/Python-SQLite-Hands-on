@@ -20,21 +20,22 @@ in `requirements.txt` file.
 2. Enter the repo directory:
 
    ```bash
-   cd your-repo
+   cd Python-SQLite-Hands-on
    ```
 3. Optional: make and activate a new virtual environment for script testing
+
    ```bash
    python -m venv env
    env/Scripts/activate
    ```
-3. Install script:
+4. Install script:
    either only install the requirement using:
 
    ```bash
    pip install -r requirements.txt
    ```
 
-   or install the script to your system [or environment] using:
+   or install the script to your system using:
 
    ```bash
    pip install .
@@ -48,8 +49,8 @@ call the script in you shell.
 
     or
 
-    src\script.py -h
+    src/script.py -h
 
 if you installed the script using 'pip install .' , you can call using:
 
-    hadi-etl-script.exe -h
+    hadi-etl-main.exe -h

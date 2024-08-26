@@ -16,13 +16,14 @@ keys are shown in help menu so the user can know which types are acceptable.
 
 '''
 
+from .csv_file import CSVFile
+from .json_file import JSONFile
 
-from .csv_file import csv_file
-from .json_file import json_file
-
+'''dfdfd'''
 ETL_FILES_TYPE_MAPPING = {
-    'json': json_file,
-    'csv':csv_file
+    
+    'json': JSONFile,
+    'csv': CSVFile
 }
 
 from typing import Tuple
@@ -37,6 +38,9 @@ def get_etl_file_class(typename)-> Tuple[bool,type] :
             [1]: type, the class if name is valid.
 
     '''
-    cls = ETL_FILES_TYPE_MAPPING[typename]
+    try:
+        cls = ETL_FILES_TYPE_MAPPING[typename]
+    except KeyError as e:
+        return False , None 
     return (cls is not None) , cls 
  
