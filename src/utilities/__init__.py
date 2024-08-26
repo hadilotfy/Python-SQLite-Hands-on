@@ -1,10 +1,15 @@
 
 from .database import read_from_database,create_sample_db
-from .files import read_from_csv,write_to_csv,read_from_json,write_to_json
 from .report import generate_report_wrapper
+from .files.etl_file import etl_file
+from .files.csv_file import csv_file
+from .files.json_file import json_file
+from .files.etl_file_map import ETL_FILES_TYPE_MAPPING
+from .files.etl_file_map import get_etl_file_class
+
 
 __all__ = [ 'create_sample_db','read_from_database',
-            'read_from_csv','read_from_json',
-            'write_to_csv','write_to_json',
-            'generate_report_wrapper'
+            'etl_file','csv_file','json_file',
+            'ETL_FILES_TYPE_MAPPING','get_etl_file_class',
+            'generate_report_wrapper',
           ]

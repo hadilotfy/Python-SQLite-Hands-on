@@ -22,6 +22,11 @@ in `requirements.txt` file.
    ```bash
    cd your-repo
    ```
+3. Optional: make and activate a new virtual environment for script testing
+   ```bash
+   python -m venv env
+   env/Scripts/activate
+   ```
 3. Install script:
    either only install the requirement using:
 
@@ -29,7 +34,7 @@ in `requirements.txt` file.
    pip install -r requirements.txt
    ```
 
-   or install the script to your system using:
+   or install the script to your system [or environment] using:
 
    ```bash
    pip install .
@@ -39,12 +44,12 @@ in `requirements.txt` file.
 
 call the script in you shell.
 
-    src/script.py --help
+    python src/script.py --help
 
     or
 
-    python src\script.py -h
+    src\script.py -h
 
 if you installed the script using 'pip install .' , you can call using:
 
-    hadi-etl-script.exe
+    hadi-etl-script.exe -h

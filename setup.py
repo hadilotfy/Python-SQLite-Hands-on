@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='Python-SQLite-Hands-on',
-    version='0.2.0',
+    version='1.0.0',
     description='A python script that creates and add data to db, csv file and json files and generate report on the data.',
     author='Hadi Lotfy',
     author_email='hadi1lotfy@gmail.com',
