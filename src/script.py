@@ -60,7 +60,7 @@ CHUNK_SIZE = 5
 RESOURCES_PATH='resources'                            # default resources directory
 DEFAULT_DB_PATH=RESOURCES_PATH+'/'+'sample.db'        # default DB file path
 DEFAULT_REPORT_PATH=RESOURCES_PATH+'/'+'report.txt'   # defualt output report path
-DEFAULT_REPORT_SCREEN_PRINTING=True                   # default behviour for report visibiliy on screen
+DEFAULT_REPORT_SCREEN_PRINTING=False                  # default behviour for report visibiliy on screen
 DEFAULT_JSON_OUT_PATH=RESOURCES_PATH+'/'+'data.json'  # defualt json data output path
 DEFAULT_CSV_OUT_PATH=RESOURCES_PATH+'/'+'data.csv'    # defualt json data output path
 # DEFAULT_OUT_PATH=RESOURCES_PATH+'/'+'data.out'        # defualt json data output path
@@ -167,8 +167,8 @@ def main():
     is_print_report_to_screen = args.report_visible # print report to screen ?
 
     # create and initialize db if it does not exist.
-    # if not os.path.isfile(input_db_file):
-    create_sample_db(input_db_file)
+    if not os.path.isfile(input_db_file):
+        create_sample_db(input_db_file)
 
     # first pipeline: read from db and put in files.
     with etl_db_conn(input_db_file) as db_conn:

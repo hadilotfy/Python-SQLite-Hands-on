@@ -1,10 +1,17 @@
-# Python-SQLite-Hands-on
+# Streamline-ETL-Reporting
 
-This is a demo for ETL python script.
+A Python script designed for ETL (Extract, Transform, Load) operations with a LiteSQL database, implemented in an efficient and optimized manner.
 
 ## Description
 
-This is a python script to create and initialize a liteSQL db, add data to the db, read the data from the DB, dump to CSV and JSON files, then read those files and generate a report that provides some insights in the data.
+This Python script performs the following tasks:
+1. Database Creation & Initialization: Sets up a LiteSQL database.
+2. Data Insertion: Inserts data into the database.
+3. Data Retrieval: Reads data from the database.
+4. Data Export: Exports data to CSV and JSON files.
+5. Reporting: Generates insightful reports based on the data.
+
+This project aims to streamline data management and reporting processes, making it easier to efficiently handle and analyze data.
 
 ## Requirements
 
@@ -12,24 +19,30 @@ in `requirements.txt` file.
 
 ## Installation
 
+### Needed OS Packages:
+
+   python3, python3.10-venv, pip
+
+### Steps:
+
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/hadilotfy/Python-SQLite-Hands-on.git
+   git clone https://github.com/hadilotfy/Streamline-ETL-Reporting.git
    ```
-2. Enter the repo directory:
+2. Change Directory:
 
    ```bash
-   cd Python-SQLite-Hands-on
+   cd Streamline-ETL-Reporting/
    ```
 3. Optional: make and activate a new virtual environment for script testing
 
    ```bash
    python -m venv env
-   env/Scripts/activate
+   env/Scripts/activate    # or    source env/Scripts/activate
    ```
 4. Install script:
-   either only install the requirement using:
+   either only install the required libraries using:
 
    ```bash
    pip install -r requirements.txt
@@ -45,12 +58,18 @@ in `requirements.txt` file.
 
 call the script in you shell.
 
-    python src/script.py --help
+```bash
+   src/script.py --help
+```
 
-    or
+   or
 
-    src/script.py -h
+```bash
+   python src/script.py --help
+```
 
 if you installed the script using 'pip install .' , you can call using:
 
-    hadi-etl-main.exe -h
+```bash
+   hadi-etl-main.exe --help
+```
